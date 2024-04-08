@@ -4,7 +4,7 @@
                     // <iostream> used to print to terminal
 #include <string> // to initialize string library
 
-int Syntax() { //main function is the starting point for program
+int main() { //main function is the starting point for program
     std::cout << "Hello, World!" << std::endl; //syntax for printing to terminal
     // std::cout << to print does not separate by lines
     // << std::endl; to end and print a new line
