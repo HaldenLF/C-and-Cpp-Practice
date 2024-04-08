@@ -1,4 +1,4 @@
-## Data Input and Output
+// ## Data Input and Output
 
 #include <iostream>
 #include <string>
@@ -8,7 +8,7 @@ int addNumbers(int first, int second){ // function that takes two parameters.
     return result; // returns the sum of both parameters
 }
 
-int main(){ 
+int main2(){ 
     int first_number {13}; //statment
     int second_number {7};
 
