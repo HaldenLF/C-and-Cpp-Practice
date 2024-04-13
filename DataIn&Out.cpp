@@ -8,7 +8,7 @@ int addNumbers(int first, int second){ // function that takes two parameters.
     return result; // returns the sum of both parameters
 }
 
-int main2(){ 
+int DataINandOUT(){ 
     int first_number {13}; //statment
     int second_number {7};
 
