@@ -6,7 +6,12 @@ int variablesAndDatatypes() {
     // init at the same time as creation
     // must init before using or else you will get garbage numbers from memory
     int file_size = 100; 
-    double sales = 9.99;
+    double sales = 9.99; // deciaml upto 15
+    float sale = 9.98; // deciaml upto 7
+    char name = 'B'; // stores a single character/ use single quotes
+    std::string text = "words";// stores multiple characters / use double quotes    
+    bool myBoolean = true;
+    
 
     /*    
     // simple swap variable value practice
