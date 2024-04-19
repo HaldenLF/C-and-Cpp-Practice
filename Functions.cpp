@@ -35,5 +35,15 @@ void referencs(){ // references and pointers are used to locate where a variable
 
     y = 10;
     * pint = 10; // dereferenced 
-
 }
+
+// ----------------- Function overloading ----------------------------
+ // function overloading it when you have multiple functions with the same name
+ // to differentiate them from each other there is a few things that must be done
+
+void print(); //valid
+// bool print(); // not valid due to type
+void print(int num, int num2); // valid with paramters
+//void print(int num, int num2); // invalid due to being identical to one above
+void print(int num1, char name); // valid since parameters are different   
+
