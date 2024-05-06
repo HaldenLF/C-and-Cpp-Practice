@@ -19,5 +19,5 @@ int enums() {
 
     color favourite = color::Red; //specified whihc enum we are using
     mood howIfeel = mood::Blue; //specified whihc enum we are using
-    
+    return 0;
 }

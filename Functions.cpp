@@ -6,7 +6,8 @@ int function(){ // function that defines variables and calls the Add function
     int y = 20;
     int answer;
 
-    answer = Add(x,y);
+    // answer = Add(x,y);
+    return 0;
 }
 
 int Add(int num1, int num2){ // function that takes two variables and adds them

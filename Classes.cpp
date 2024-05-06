@@ -34,12 +34,12 @@ private: // data
     int extension;
 };
 
-int mainClasses() {
-  Employee emp1("Jane Smith", 54321, 2345);  // Create an Employee with constructor
+// int mainClasses() {
+//   Employee emp1("Jane Smith", 54321, 2345);  // Create an Employee with constructor
 
-  cout << "Employee Name: " << emp1.GetName() << endl;
-  cout << "Employee Number: " << emp1.GetEmpNo() << endl;
-  cout << "Employee Extension: " << emp1.GetExtension() << endl;
+//   cout << "Employee Name: " << emp1.GetName() << endl;
+//   cout << "Employee Number: " << emp1.GetEmpNo() << endl;
+//   cout << "Employee Extension: " << emp1.GetExtension() << endl;
 
-  return 0;
-}
+//   return 0;
+// }

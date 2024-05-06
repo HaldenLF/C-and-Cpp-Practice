@@ -32,8 +32,5 @@ int structs() {
         bool ownsCar;
         unsigned wearsGlasses :1; // 1 bit
     };
-
-
-
-
+    return 0;
 }
