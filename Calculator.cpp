@@ -1,10 +1,17 @@
 // This is a work in progress calculator that will grow over time to perform most opperations that a standard calculator  can do. 
 #include <iostream> 
 #include <string>
-#include "Addition.h"
+#include "CalculatorFunctions.h"
 using namespace std;
 
- int main(){
+
+int main_menu(){
+    // Create main_menu function that cna be called and display the menu
+    // after each calculation is finished
+    return 0;
+}
+
+int main(){
 
     string main_menu;
     main_menu = "What type of calculation would you like to perform?\n"
@@ -15,22 +22,27 @@ using namespace std;
 
     std::cout << main_menu; //prints the menu message
 
-    string userInput = "> "; 
+    string userInput = "\n> "; 
     getline(std::cin,userInput);   //get the input from the user.
 
-    if (userInput == "1" || "Addition"){
-        Addition(); // **************create function
-    }
-    // else if (userInput == "2" || "Subtraction"){
-    //     Subtraction.Subtraction(); // **************create function
+    if (userInput == "Addition" || userInput == "1") {
+        Addition(); 
+        // call main_menu function
+    } 
+    else if (userInput == "Subtraction" || userInput == "2") {
+        Subtraction();
+        // call main_menu function 
+    } 
+    else if (userInput == "Multiplication" || userInput == "3") {
+        Multiplication();
+        // call main_menu function 
+    } 
+    // else if (userInput == "Division" ||userInput == "4") {
+    //     Division();
+            // call main_menu function 
     // } 
-    // else if (userInput == "3" || "Multiplication"){
-    //     Multiplication.Multiplication(); // **************create function
-    // }
-    // else if (userInput == "4" || "Division"){
-    //     Division.Division(); // **************create function
-    // }
     else {
-        std::cout << main_menu; 
+        // replace with main_menu function call
+        std::cout << main_menu;  // Display menu for invalid input
     }
 }
