@@ -26,21 +26,21 @@ int main(){
     getline(std::cin,userInput);   //get the input from the user.
 
     if (userInput == "Addition" || userInput == "1") {
-        Addition(); 
+        Addition(); // perform addition
         // call main_menu function
     } 
     else if (userInput == "Subtraction" || userInput == "2") {
-        Subtraction();
+        Subtraction(); // perform subtraction
         // call main_menu function 
     } 
     else if (userInput == "Multiplication" || userInput == "3") {
-        Multiplication();
+        Multiplication(); // perform multiplication
         // call main_menu function 
     } 
-    // else if (userInput == "Division" ||userInput == "4") {
-    //     Division();
-            // call main_menu function 
-    // } 
+    else if (userInput == "Division" ||userInput == "4") {
+        Division(); // perform division
+        // call main_menu function 
+    } 
     else {
         // replace with main_menu function call
         std::cout << main_menu;  // Display menu for invalid input

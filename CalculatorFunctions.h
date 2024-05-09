@@ -2,7 +2,7 @@
 #define FUNCTIONS_H
 
 // Prototype for the calculator functions
-int Addition();
+double Addition();
 double Subtraction();
 double Multiplication();
 
