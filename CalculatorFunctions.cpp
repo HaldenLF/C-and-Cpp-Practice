@@ -36,7 +36,7 @@ double Subtraction(){
     vector<double> numbers; // vector to store numbers from input
 
     cout << "\nEnter the numbers you wish to subtract!"
-            "Press Q to exit\n" // prompt user for input and instructions to exit
+            "Q to exit\n" // prompt user for input and instructions to exit
             "> ";
 
     double number;
@@ -51,7 +51,7 @@ double Subtraction(){
 
     double result = numbers[0]; // loop to subtract number from previous
     for (double i = 1; i < numbers.size(); i++) {
-        result -= numbers[i];
+    result -= numbers[i];
     }
 
     cout << "The result is: " << result << endl;// returns result
@@ -63,11 +63,11 @@ double Multiplication(){
     vector<double> numbers;// vector to store numbers from input
 
     cout << "\nEnter the numbers you wish to Multiply!\n"
-            "Press Q to exit\n"// prompt user for input and instructions to exit
+            "Q to exit\n"// prompt user for input and instructions to exit
             "> ";
 
     double number;
-    while (cin >> number){// loop to check if input if number, if not then move on
+    while (cin >> number){// loop to check if input is a number, if not then move on
         numbers.push_back(number);
     }
 
@@ -79,6 +79,37 @@ double Multiplication(){
     double result = 1.0; //sets initial number to one to avoid multiply by 0
     for (double number: numbers) {// loop tp mulitpy number by previous
         result *= number;
+    }
+
+    cout << "The result is: " << result << endl; // returns result
+    return 0;
+}
+
+double Division(){
+    
+    vector<double> numbers;// vector to store numbers from input
+
+    cout << "\nEnter the numbers you wish to Divide!\n"
+            "Q to exit\n"// prompt user for input and instructions to exit
+            "> ";
+
+    double number;
+    while (cin >> number){// loop to check if input is a number, if not then move on
+        numbers.push_back(number);
+    }
+
+    if (numbers.empty()) {// checks to see if any input has been given
+    cout << "No numbers entered." << endl;
+    return numeric_limits<double>::quiet_NaN();
+    }
+
+    double result = numbers[0];
+    for (int i = 1; i < numbers.size(); i++){ // loop to add numbers to variable
+        if (numbers[i] == 0){ // checks for division by 0
+            cout << "Cannot divide by zero!" << endl;
+            return numeric_limits<double>::quiet_NaN();
+        }
+        result /= numbers[i]; // divides the number by the previous
     }
 
     cout << "The result is: " << result << endl; // returns result

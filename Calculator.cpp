@@ -5,14 +5,8 @@
 using namespace std;
 
 
-int main_menu(){
-    // Create main_menu function that cna be called and display the menu
-    // after each calculation is finished
-    return 0;
-}
-
-int main(){
-
+string main_menu(){
+    
     string main_menu;
     main_menu = "What type of calculation would you like to perform?\n"
             "(1) Addition\n"
@@ -20,29 +14,33 @@ int main(){
             "(3) Multiplication\n"
             "(4) Division\n";
 
-    std::cout << main_menu; //prints the menu message
+    return main_menu;
+}
+
+int main(){
+
+    std::cout << main_menu(); //prints the menu message
 
     string userInput = "\n> "; 
     getline(std::cin,userInput);   //get the input from the user.
 
-    if (userInput == "Addition" || userInput == "1") {
+    if (userInput == "Addition" || userInput == "1" ) {
         Addition(); // perform addition
-        // call main_menu function
+        main_menu();
     } 
     else if (userInput == "Subtraction" || userInput == "2") {
         Subtraction(); // perform subtraction
-        // call main_menu function 
+        main_menu(); 
     } 
     else if (userInput == "Multiplication" || userInput == "3") {
         Multiplication(); // perform multiplication
-        // call main_menu function 
+        main_menu(); 
     } 
     else if (userInput == "Division" ||userInput == "4") {
         Division(); // perform division
-        // call main_menu function 
+        main_menu(); 
     } 
     else {
-        // replace with main_menu function call
-        std::cout << main_menu;  // Display menu for invalid input
+        main_menu(); // Display menu for invalid input
     }
 }
