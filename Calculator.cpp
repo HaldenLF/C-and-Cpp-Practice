@@ -2,6 +2,7 @@
 #include <iostream> 
 #include <string>
 #include "CalculatorFunctions.h"
+
 using namespace std;
 
 
@@ -12,7 +13,8 @@ string main_menu(){
             "(1) Addition\n"
             "(2) Subtraction\n"
             "(3) Multiplication\n"
-            "(4) Division\n";
+            "(4) Division\n"
+            "(5) Sqaure Root\n";
 
     return main_menu;
 }
@@ -21,22 +23,36 @@ int main(){
 
     std::cout << main_menu(); //prints the menu message
 
-    string userInput = "\n> "; 
-    getline(std::cin,userInput);   //get the input from the user.
+    string userInput;
+    cout << "> ";
+    getline(cin, userInput);   //get the input from the user.
 
-    if (userInput == "Addition" || userInput == "1" ) {
+    for (int i = 0; userInput[i] != '\0'; ++i) { // converts string to lowercase
+        userInput[i] = tolower(userInput[i]);
+    }
+
+    if (userInput == "addition" || userInput == "1" || userInput == "add"
+        || userInput == "+") {
         Addition(); // perform addition
-        main_menu();
+        cout << main_menu();
     } 
-    else if (userInput == "Subtraction" || userInput == "2") {
+    else if (userInput == "subtraction" || userInput == "2" || userInput == "sub"
+        || userInput == "-" || userInput == "minus") {
         Subtraction(); // perform subtraction
         main_menu(); 
     } 
-    else if (userInput == "Multiplication" || userInput == "3") {
+    else if (userInput == "multiplication" || userInput == "3" || userInput == "times"
+        || userInput == "mutliply" || userInput == "x" || userInput == "*") {
         Multiplication(); // perform multiplication
         main_menu(); 
     } 
-    else if (userInput == "Division" ||userInput == "4") {
+    else if (userInput == "division" ||userInput == "4" || userInput == "divide"
+        || userInput == "/") {
+        Division(); // perform division
+        main_menu(); 
+    } 
+    else if (userInput == "square root" ||userInput == "5" || userInput == "sqrt"
+        || userInput == "^2") {
         Division(); // perform division
         main_menu(); 
     } 
