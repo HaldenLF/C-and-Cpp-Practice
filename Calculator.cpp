@@ -5,6 +5,7 @@
 
 using namespace std;
 
+string userInput;
 
 string main_menu(){
     
@@ -16,20 +17,19 @@ string main_menu(){
             "(4) Division\n"
             "(5) Sqaure Root\n";
 
-    return main_menu;
-}
-
-int main(){
-
-    std::cout << main_menu(); //prints the menu message
-
-    string userInput;
     cout << "> ";
     getline(cin, userInput);   //get the input from the user.
 
     for (int i = 0; userInput[i] != '\0'; ++i) { // converts string to lowercase
         userInput[i] = tolower(userInput[i]);
     }
+
+    return main_menu;
+}
+
+int main(){
+
+    std::cout << main_menu(); //prints the menu message
 
     if (userInput == "addition" || userInput == "1" || userInput == "add"
         || userInput == "+") {

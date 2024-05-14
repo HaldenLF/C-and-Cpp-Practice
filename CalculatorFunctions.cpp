@@ -28,7 +28,7 @@ double Addition(){
     }
 
     cout << "The result is: " << sum << endl; // print result
-    return 0;
+    return sum;
 }
 
 double Subtraction(){
